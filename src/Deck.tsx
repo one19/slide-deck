@@ -1,0 +1,49 @@
+import { ReactElement, useState } from 'react';
+import styled from '@emotion/styled';
+
+const DeckContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+const Nav = styled.nav`
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+
+  button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+`;
+
+type DeckProps = {
+  slides: ReactElement[];
+};
+
+export const Deck = ({ slides }: DeckProps) => {
+  const [current, setCurrent] = useState(0);
+
+  const handleNext = () =>
+    setCurrent((c) => Math.min(c + 1, slides.length - 1));
+  const handlePrev = () => setCurrent((c) => Math.max(c - 1, 0));
+
+  return (
+    <DeckContainer>
+      {slides[current]}
+      <Nav>
+        <button onClick={handlePrev} disabled={current === 0}>
+          ← Prev
+        </button>
+        <span>
+          {current + 1}/{slides.length}
+        </span>
+        <button onClick={handleNext} disabled={current === slides.length - 1}>
+          Next →
+        </button>
+      </Nav>
+    </DeckContainer>
+  );
+};

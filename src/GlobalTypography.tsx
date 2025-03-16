@@ -2,10 +2,12 @@ import { Global, css, useTheme } from '@emotion/react';
 
 const GlobalTypography = () => {
   const theme = useTheme();
+
   return (
     <Global
       styles={css`
-        body, #root {
+        body,
+        #root {
           display: flex;
           place-items: center;
           min-width: 320px;
@@ -15,7 +17,7 @@ const GlobalTypography = () => {
           font-weight: 400;
 
           color-scheme: light dark;
-          background-color: #242424;
+          background-color: ${theme.colors.primaryBackground};
 
           font-synthesis: none;
           text-rendering: optimizeLegibility;

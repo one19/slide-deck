@@ -1,8 +1,8 @@
-import { useState } from 'react'
+import { useState } from 'react';
 import styled from '@emotion/styled';
 import { keyframes } from '@emotion/react';
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import reactLogo from './assets/react.svg';
+import viteLogo from '/vite.svg';
 
 const Container = styled.div`
   max-width: 1280px;
@@ -70,7 +70,7 @@ const ReadTheDocs = styled.p`
 `;
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <Container>
@@ -91,11 +91,9 @@ function App() {
           Edit <code>src/App.tsx</code> and save to test HMR
         </p>
       </Card>
-      <ReadTheDocs>
-        Click on the Vite and React logos to learn more
-      </ReadTheDocs>
+      <ReadTheDocs>Click on the Vite and React logos to learn more</ReadTheDocs>
     </Container>
   );
 }
 
-export default App
+export default App;

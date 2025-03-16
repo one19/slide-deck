@@ -15,7 +15,6 @@ type Story = StoryObj<typeof Slide>;
 
 export const Default: Story = {
   args: {
-    title: 'Example Slide',
     children: 'This is an example slide content rendered with Emotion themes.',
   },
 };

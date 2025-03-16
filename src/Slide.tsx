@@ -11,24 +11,11 @@ const SlideContainer = styled.div`
   color: ${({ theme }) => theme.colors.primary};
 `;
 
-const SlideTitle = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 1.5rem;
-`;
-
-const SlideContent = styled.div`
-  font-size: 1.5rem;
-  flex: 1;
-`;
-
 type SlideProps = {
   title?: string;
   children: ReactNode;
 };
 
-export const Slide = ({ title, children }: SlideProps) => (
-  <SlideContainer>
-    {title && <SlideTitle>{title}</SlideTitle>}
-    <SlideContent>{children}</SlideContent>
-  </SlideContainer>
+export const Slide = ({ children }: SlideProps) => (
+  <SlideContainer className="slide">{children}</SlideContainer>
 );

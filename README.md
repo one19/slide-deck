@@ -1,6 +1,6 @@
 # Slides template repo
 
-[Hopefully deployed here](https://one19.github.io/slide-deck/)
+[Deployed here](https://one19.github.io/slide-deck/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 Tech:
@@ -22,3 +22,11 @@ Steps to use:
 6. push it, and enjoy the insta-compile on gh-action
 7. think about deleting `dependabot` once cloned
 8. backport cool stuff you make to the template so i can use it in the future
+
+
+### todo
+
+1. add a github logo linking back to the repo in a corner someplace
+2. add a 2-panel wrapper
+3. make a prezzo using it
+4. make it not look like a dog's breakfast

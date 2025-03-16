@@ -8,6 +8,7 @@ declare module '@emotion/react' {
 }
 
 export const theme = {
+  name: 'dark',
   colors: {
     link: '#646cff',
     linkHover: '#535bf2',
@@ -17,6 +18,7 @@ export const theme = {
 };
 
 export const lightTheme = merge(theme, {
+  name: 'light',
   colors: {
     link: '#646cff',
     linkHover: '#747bff',

@@ -24,7 +24,7 @@ https://serp.co/tools/css-reset/
 
   h1 {
     font-size: 2em;
-    margin: 0.67em 0;
+    margin: 0 0 0.67em 0;
   }
 
   hr {
@@ -36,6 +36,8 @@ https://serp.co/tools/css-reset/
   pre {
     font-family: monospace, monospace; /* 1 */
     font-size: 1em; /* 2 */
+    margin: 0;
+    padding: 0;
   }
 
   a {

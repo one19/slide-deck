@@ -2,12 +2,14 @@ import { ReactElement, useState } from 'react';
 import styled from '@emotion/styled';
 
 const DeckContainer = styled.div`
-  display: flex;
-  flex-direction: column;
+  box-sizing: border-box;
 `;
 
 const Nav = styled.nav`
   position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   bottom: 1rem;
   right: 1rem;
   display: flex;

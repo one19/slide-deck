@@ -7,8 +7,6 @@ import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
 
 const Container = styled.div`
-  font-size: 1.1rem;
-  padding: 1rem;
   border-radius: 0.5rem;
   overflow: auto;
 `;

@@ -3,29 +3,27 @@ import {
   dracula,
   duotoneLight,
 } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import styled from '@emotion/styled';
 import { useTheme } from '@emotion/react';
-
-const Container = styled.div`
-  border-radius: 0.5rem;
-  overflow: auto;
-`;
 
 type CodeBlockProps = {
   language: string;
   code: string;
+  inline?: boolean;
 };
 
-export const Codeblock = ({ language, code }: CodeBlockProps) => {
+export const Codeblock = ({ language, code, inline }: CodeBlockProps) => {
   const theme = useTheme();
   return (
-    <Container>
-      <SyntaxHighlighter
-        language={language}
-        style={theme.name === 'light' ? duotoneLight : dracula}
-      >
-        {code.trim()}
-      </SyntaxHighlighter>
-    </Container>
+    <SyntaxHighlighter
+      language={language}
+      style={theme.name === 'light' ? duotoneLight : dracula}
+      customStyle={{
+        display: inline ? 'inline' : 'block',
+        padding: '0.2rem 0.4rem',
+        borderRadius: '0.5rem',
+      }}
+    >
+      {code.trim()}
+    </SyntaxHighlighter>
   );
 };

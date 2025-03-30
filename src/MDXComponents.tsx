@@ -13,7 +13,15 @@ export const mdxComponents = {
     className?: string;
     children: string;
   }) => {
-    const language = className?.replace(/language-/, '') ?? '';
-    return <Codeblock {...props} language={language} code={children.trim()} />;
+    const language = className?.replace(/language-/, '') ?? 'text';
+
+    return (
+      <Codeblock
+        {...props}
+        language={language}
+        code={children.trim()}
+        inline={!className}
+      />
+    );
   },
 };

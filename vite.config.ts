@@ -4,6 +4,9 @@ import mdx from '@mdx-js/rollup';
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: '/slide-deck/', // CHANGE WHEN CLONING
-  plugins: [{ enforce: 'pre', ...mdx() }, react()],
+  base: '/the-css-animation-sweeping-the-nation/', // CHANGE WHEN CLONING
+  plugins: [
+    { enforce: 'pre', ...mdx({ providerImportSource: '@mdx-js/react' }) },
+    react(),
+  ],
 });

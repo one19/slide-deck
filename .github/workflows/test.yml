@@ -1,0 +1,35 @@
+name: Test Builds
+
+on:
+  pull_request:
+    # Run on dependabot PRs as well as any others, adjust the branches as needed
+    branches:
+      - '**'
+  push:
+    branches:
+      - 'dependabot/**'
+  workflow_dispatch:
+
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build Prezzo
+        env:
+          NODE_ENV: production
+        run: npm run build
+
+      - name: Build Storybook
+        run: npm run build:storybook

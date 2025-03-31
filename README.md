@@ -1,6 +1,7 @@
 # Slides template repo
 
 [Deployed here](https://one19.github.io/slide-deck/)
+[Storybook deployed here](https://one19.github.io/slide-deck/storybook/)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 Tech:

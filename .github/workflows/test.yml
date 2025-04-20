@@ -2,12 +2,8 @@ name: Test Builds
 
 on:
   pull_request:
-    # Run on dependabot PRs as well as any others, adjust the branches as needed
     branches:
-      - '**'
-  push:
-    branches:
-      - 'dependabot/**'
+      - 'main'
   workflow_dispatch:
 
 jobs:

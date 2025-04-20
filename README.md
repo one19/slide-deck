@@ -28,5 +28,3 @@ Steps to use:
 ### todo
 
 1. add a github logo linking back to the repo in a corner someplace
-3. make a prezzo using it
-4. make it not look like a dog's breakfast

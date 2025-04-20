@@ -54,6 +54,10 @@ const GlobalTypography = () => {
         a:hover {
           color: ${theme.colors.linkHover};
         }
+
+        * {
+          z-index: 1;
+        }
       `}
     />
   );

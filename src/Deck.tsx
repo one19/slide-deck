@@ -1,5 +1,6 @@
 import { ReactElement, useState } from 'react';
 import styled from '@emotion/styled';
+import BackgroundCircles from './Background';
 
 const DeckContainer = styled.div`
   box-sizing: border-box;
@@ -34,6 +35,7 @@ export const Deck = ({ slides }: DeckProps) => {
 
   return (
     <DeckContainer>
+      <BackgroundCircles currentSlide={current} totalSlides={slides.length} />
       {slides[current]}
       <Nav>
         <button onClick={handlePrev} disabled={current === 0}>

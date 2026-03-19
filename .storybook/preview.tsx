@@ -1,5 +1,4 @@
-import React from 'react';
-import type { Preview } from '@storybook/react';
+import type { Preview } from '@storybook/react-vite';
 import { ThemeProvider } from '@emotion/react';
 import GlobalReset from '../src/GlobalReset';
 import GlobalTypography from '../src/GlobalTypography';
@@ -31,7 +30,7 @@ const preview: Preview = {
     },
   ],
   parameters: {
-    backgrounds: { disable: true },
+    backgrounds: { disabled: true },
   },
 };
 
